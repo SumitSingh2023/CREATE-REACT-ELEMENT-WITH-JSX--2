@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSX and Babel</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your JSX code here
+    
+    //Basic level
+
+    let simple=(<p>Seize the day</p>)
+   
+    // intermediate level
+    
+    let intermediate="Seize the day"
+    let intermediateValue=<p>{intermediate}</p>
+
+    // advance level
+
+    let bool=false
+    let advance=bool?<p>Seize the day</p>:<p>Make the most of it</p>
+
+    let mainRoot=document.getElementById("root")
+    ReactDOM.createRoot(mainRoot).render(simple)
+    ReactDOM.createRoot(mainRoot).render(intermediateValue)
+    ReactDOM.createRoot(mainRoot).render(advance)
+
+    
+    
+   
+  </script>
+</body>
+</html>
